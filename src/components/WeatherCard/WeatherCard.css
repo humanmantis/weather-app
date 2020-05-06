@@ -1,0 +1,29 @@
+.weather-card {
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.weather-card.active {
+    background: #efefef;
+    cursor: default;
+}
+
+.weather-card-text {
+    font-size: 18px;
+    margin-bottom: .5em;
+}
+
+.weather-card-icon {
+    width: 75px;
+}
+
+.weather-cart-temp {
+    font-size: 1.5em;
+    margin-bottom: .1em;
+    margin-top: .5em;
+}

@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
