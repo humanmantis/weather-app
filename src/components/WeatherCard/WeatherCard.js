@@ -3,6 +3,7 @@ import "./WeatherCard.css";
 
 class WeatherCard extends PureComponent {
 
+  // set active card
   setActive = () => {
     this.props.setActive(this.props.index)
   }

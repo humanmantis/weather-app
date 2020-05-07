@@ -4,7 +4,8 @@ import "./WeatherDetail.css";
 class WeatherDetail extends PureComponent {
   render() {
     const { city, data } = this.props;
-    console.log("this.props :>> ", this.props);
+
+    // waiting data loading
     if (!data) {
       return <h3 className="info">Almost ready...</h3>;
     }
@@ -41,7 +42,7 @@ class WeatherDetail extends PureComponent {
               </div>
               <div className="weather-detail-block">
                 <p className="weather-detail-text">
-                  Chanse of rain: <span id="rain">{data.day.daily_chance_of_rain}%</span>
+                  Chance of rain: <span id="rain">{data.day.daily_chance_of_rain}%</span>
                 </p>
                 <p className="weather-detail-text">
                   Humidity: <span id="humidity">{data.day.avghumidity}%</span>

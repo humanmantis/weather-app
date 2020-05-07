@@ -1,0 +1,26 @@
+.search-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.search-input {
+    padding: 5px;
+    border: 0;
+    border-right: 1px solid black;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.search-btn {
+    padding: 5px 20px;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    background-color: #fff;
+}

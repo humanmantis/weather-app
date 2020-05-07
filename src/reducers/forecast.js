@@ -17,8 +17,9 @@ const isLoading = handleActions({
 }, false)
 
 const error = handleActions({
-    [forecastFailure.toString()]: (_state, action) => action.error
-}, null)
+    [forecastFailure.toString()]: () => true,
+    [forecastSuccess.toString()]: () => false
+}, false)
 
 export const forecast = combineReducers({
   city,

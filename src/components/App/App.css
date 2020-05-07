@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
 }
 
-.forecast {
+.forecast-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
