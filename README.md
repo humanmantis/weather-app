@@ -6,7 +6,7 @@
 
 This application allows you to get a forecast in the desired city.
 
-Data get from [WeatherAPI](www.weatherapi.com).
+Data get from [WeatherAPI](https://weatherapi.com).
 
 ## In the project directory, you can run:
 
