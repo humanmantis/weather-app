@@ -9,3 +9,7 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
+.info {
+    color: #808080;
+}

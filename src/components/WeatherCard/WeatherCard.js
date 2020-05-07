@@ -1,17 +1,23 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import "./WeatherCard.css";
 
-class WeatherCard extends Component {
-  render(date, condition, avgtemp_c) {
+class WeatherCard extends PureComponent {
+
+  setActive = () => {
+    this.props.setActive(this.props.index)
+  }
+  render() {
+
+    const {date, condition, avgtemp_c, isActive} = this.props;
     return (
-      <div className="weather-card">
+      <div className={"weather-card " + (isActive ? "active" : "")} onClick={this.setActive}>
         <p className="weather-card-text" id="date">
-          2020-05-06
+          {date}
         </p>
-        <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Condition icon" className="weather-card-icon"/>
-        <h3 className="weather-cart-temp">8.3°C</h3>
+        <img src={condition && condition.icon} alt={condition && condition.text} className="weather-card-icon"/>
+        <h3 className="weather-cart-temp">{avgtemp_c}°C</h3>
         <p className="weather-cart-text" id="condition">
-          Cloudy
+          {condition && condition.text}
         </p>
       </div>
     );
