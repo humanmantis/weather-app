@@ -2,13 +2,11 @@ import { handleActions } from "redux-actions";
 import { combineReducers } from "redux";
 import { forecastRequest, forecastSuccess, forecastFailure } from "../actions/forecast";
 
-const city = handleActions({
-    [forecastRequest.toString()]: (_state, action) => action.payload
-}, '')
-
 const data = handleActions({
-    [forecastSuccess.toString()]: (_state, action) => action.payload.forecast.forecastday
-}, []);
+    [forecastSuccess.toString()]: (_state, action) => ({
+        location: action.payload.location,
+        forecastday: action.payload.forecast.forecastday})
+}, {});
 
 const isLoading = handleActions({
     [forecastRequest.toString()]: () => true,
@@ -22,7 +20,6 @@ const error = handleActions({
 }, false)
 
 export const forecast = combineReducers({
-  city,
   data,
   isLoading,
   error,

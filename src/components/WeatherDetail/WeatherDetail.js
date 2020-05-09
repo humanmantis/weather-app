@@ -26,7 +26,7 @@ class WeatherDetail extends PureComponent {
               {data.day.avgtemp_c}°C
             </h3>
             <p className="weather-detail-text" id="condition">
-            {data.day.condition.text}
+              {data.day.condition.text}
             </p>
           </div>
           <div className="weather-detail-container-lg">
@@ -38,6 +38,9 @@ class WeatherDetail extends PureComponent {
                 </p>
                 <p className="weather-detail-text">
                   Max temperature: <span id="maxntemp">{data.day.maxtemp_c}°C</span>
+                </p>
+                <p className="weather-detail-text">
+                  Max wind: <span id="maxwind">{data.day.maxwind_kph} kph</span>
                 </p>
               </div>
               <div className="weather-detail-block">
@@ -53,10 +56,10 @@ class WeatherDetail extends PureComponent {
               </div>
               <div className="weather-detail-block">
                 <p className="weather-detail-text">
-                  Sunset: <span id="sunset">{data.astro.sunset}</span>
+                  Sunrise: <span id="sunrise">{data.astro.sunrise}</span>
                 </p>
                 <p className="weather-detail-text">
-                  Sunrise: <span id="sunrise">{data.astro.sunrise}</span>
+                  Sunset: <span id="sunset">{data.astro.sunset}</span>
                 </p>
               </div>
             </div>
